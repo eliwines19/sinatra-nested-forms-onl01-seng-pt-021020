@@ -3,10 +3,10 @@ class Ship
 
   @@all = []
 
-  def initalize(args)
-    @name = args[:name]
-    @type = args[:type]
-    @booty = args[:booty]
+  def initalize(params)
+    @name = params[:name]
+    @type = params[:type]
+    @booty = params[:booty]
     @@all << self
   end
 
