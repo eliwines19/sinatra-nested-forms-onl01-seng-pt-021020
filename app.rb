@@ -9,14 +9,14 @@ module FormsLab
 
     get '/new' do
       erb :"pirates/new"
-    end 
+    end
 
-    post '/pirates' do 
+    post '/pirates' do
       @pirate = Pirate.new(params[:pirate])
 
       params[:pirate][:ships].each do |details|
         Ship.new(details)
-      end 
+      end
 
       @ships = Ship.all
 
